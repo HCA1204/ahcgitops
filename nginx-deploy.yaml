@@ -4,9 +4,9 @@ metadata:
   creationTimestamp: null
   labels:
     app: nginx
-  name: nginx_deploy
+  name: nginx
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -16,12 +16,9 @@ spec:
       creationTimestamp: null
       labels:
         app: nginx
-        run: nginx_deploy
     spec:
       containers:
       - image: nginx
         name: nginx
-        port:
-        - containerPort: 80
         resources: {}
 status: {}
